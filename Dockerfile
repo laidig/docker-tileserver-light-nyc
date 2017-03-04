@@ -6,6 +6,7 @@ RUN apk --no-cache add openssl
 
 RUN cd /data &&\
     npm install -g tileserver-gl-light &&\
+    npm cache clean &&\
     wget https://openmaptiles.os.zhdk.cloud.switch.ch/v3.3/extracts/new-york_new-york.mbtiles
 
 EXPOSE 80
